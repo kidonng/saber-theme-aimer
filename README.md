@@ -5,8 +5,6 @@
 
 > A concise [Saber](https://saber.land/) theme, ported and evoluted from the unreleased hexo-theme-mina.
 
-**For changes and usage see [Changelog](./CHANGELOG.md).**
-
 ## Install
 
 Since this modified theme isn't published on npm, you need to manually install it:
@@ -16,9 +14,12 @@ Since this modified theme isn't published on npm, you need to manually install i
 
 ```js
 {
+  // ...
   theme: './path/to/theme'
 }
 ```
+
+For detailed usage and changes, see [Changelog](./CHANGELOG.md).
 
 ## Layouts
 
