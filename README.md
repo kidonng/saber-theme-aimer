@@ -5,6 +5,8 @@
 
 > A concise [Saber](https://saber.land/) theme, ported and evoluted from the unreleased hexo-theme-mina.
 
+This is a fork of [the original theme](https://github.com/h404bi/www.h404bi.com/tree/9f3305d724f7553f6e9b8874f86598be21c1e4b5/packages/saber-theme-aimer).
+
 ## Install
 
 Since this modified theme isn't published on npm, you need to manually install it:
