@@ -52,7 +52,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Disqus from '../components/Disqus'
 import Contents from '../components/Contents'
-import mediumZoom from 'medium-zoom'
 import date from '../utils/date'
 import meta from '../utils/meta'
 
@@ -65,8 +64,6 @@ export default {
     Contents
   },
   mounted() {
-    mediumZoom('.page-body :not(a) > img')
-
     // Create lazy load loader for external images only
     this.$nextTick(() =>
       document.querySelectorAll('[lazy]:not([data-src^="/"])').forEach(el =>

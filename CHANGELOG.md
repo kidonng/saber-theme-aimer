@@ -1,10 +1,10 @@
 # Changelog
 
-Based on [9f3305d](https://github.com/h404bi/www.h404bi.com/tree/9f3305d724f7553f6e9b8874f86598be21c1e4b5/packages/saber-theme-aimer) (Jun 9, 2019). Some refactor/tweaking changes are not listed.
+Based on commit [9f3305d](https://github.com/h404bi/www.h404bi.com/tree/9f3305d724f7553f6e9b8874f86598be21c1e4b5/packages/saber-theme-aimer) (Jun 9, 2019). Some refactor/tweaking changes are not listed.
 
 ## Usage
 
-The theme requires the following packages:
+The theme depends on following packages:
 
 - `sass` and `sass-loader`
 - `saber-plugin-query-posts`
@@ -12,16 +12,17 @@ The theme requires the following packages:
 
 And works best with following plugins:
 
-- `markdown-it-attrs`/`markdown-it-decorate` and `markdown-it-implicit-figures`
-  - Config for `markdown-it-implicit-figures`: `figcaption: true`
+- `markdown-it-attrs` / `markdown-it-decorate`
+- `markdown-it-implicit-figures`
+  - Plugin config: `figcaption: true`
 - `markdown-it-footnote`
-- `prismjs` and `saber-plugin-prismjs`
+- `prismjs` & `saber-plugin-prismjs`
 - `saber-plugin-image`
+- `saber-plugin-medium-zoom`
 
 ## New
 
 - `smoothscroll-for-websites`
-- `medium-zoom`
 - `prism-theme-one-dark`
   - `saber-highlight-css@0.0.5` included
 - Table of contents
@@ -53,7 +54,7 @@ And works best with following plugins:
 ## Tweaks
 
 - Hide heading anchor on small screens
-- Change post outdating period to 180 days 
+- Change post outdated period to 180 days 
 - Smarter Disqus loading
 - Fix 404 page layout
 - More...
