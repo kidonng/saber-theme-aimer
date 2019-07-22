@@ -7,7 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "bulma": "0.7.5",
-    "ga-lite": "2.0.1",
     "medium-zoom": "1.0.4",
     "prism-theme-one-dark": "^1.0.0",
     "smoothscroll-for-websites": "1.4.9",

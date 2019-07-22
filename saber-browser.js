@@ -1,23 +1,10 @@
 import './styles/main.scss'
-import galite from 'ga-lite'
 
-export default ({ setHead, router }) => {
+export default ({ setHead }) => {
   if (process.browser) {
     import('smoothscroll-for-websites')
 
     document.documentElement.classList.toggle('serif', JSON.parse(localStorage.serif || false))
-
-    if (process.env.NODE_ENV === 'production') {
-      router.afterEach(to => {
-        if (router.app.$themeConfig.googleAnalyticsId) {
-          galite('create', router.app.$themeConfig.googleAnalyticsId, 'auto')
-          router.app.$themeConfig.googleAnalyticsId = null
-        } else {
-          galite('set', 'page', to.fullPath)
-          galite('send', 'pageview')
-        }
-      })
-    }
   }
 
   setHead(function() {

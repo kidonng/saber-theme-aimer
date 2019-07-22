@@ -22,8 +22,6 @@ And works best with following plugins:
 
 - `smoothscroll-for-websites`
 - `medium-zoom`
-- `ga-lite`
-  - In Saber theme config: `googleAnalyticsId: UA-XXXXXXXXX-X`
 - `prism-theme-one-dark`
   - `saber-highlight-css@0.0.5` included
 - Table of contents
