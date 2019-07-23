@@ -2,14 +2,14 @@
   <div class="frontpage">
     <div class="frontpage-content">
       <saber-link
-        v-if="$themeConfig.home.avatar.path"
+        v-if="page.attributes.avatarLink"
         class="avatar"
-        :to="$themeConfig.home.avatar.path"
-        :title="$themeConfig.home.avatar.title">
-        <saber-image :src="require('../assets/avatar.png?size=150')" alt="Avatar" />
+        :to="page.attributes.avatarLink"
+        :title="page.attributes.avatarTitle">
+        <saber-image :src="page.attributes.assets.avatar" alt="Avatar" />
       </saber-link>
       <div v-else class="avatar">
-        <saber-image :src="require('../assets/avatar.png?size=150')" alt="Avatar" />
+        <saber-image :src="page.attributes.assets.avatar" alt="Avatar" />
       </div>
       <h1 class="name">{{ $siteConfig.author }}</h1>
       <div class="slogan" :title="$themeConfig.home.slogan.title">
@@ -43,6 +43,7 @@
 import meta from '../utils/meta'
 
 export default {
+  props: ['page'],
   head() {
     return {
       title: this.$siteConfig.title,

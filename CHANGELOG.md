@@ -1,16 +1,15 @@
 # Changelog
 
-Based on commit [9f3305d](https://github.com/h404bi/www.h404bi.com/tree/9f3305d724f7553f6e9b8874f86598be21c1e4b5/packages/saber-theme-aimer) (Jun 9, 2019). Some refactor/tweaking changes are not listed.
+Synced with commit [81443fc](https://github.com/h404bi/www.h404bi.com/tree/81443fc3a42d591aea72ece464aeb2297ea7432a/packages/saber-theme-aimer) (Jul 22, 2019). Some refactor/tweaking changes are not listed.
 
-## Usage
+## Packages
 
 The theme depends on following packages:
 
 - `sass` and `sass-loader`
 - `saber-plugin-query-posts`
-- `DisqusJS`
 
-And works best with following plugins:
+And works best with following packages:
 
 - `markdown-it-attrs` / `markdown-it-decorate`
 - `markdown-it-implicit-figures`
@@ -22,18 +21,19 @@ And works best with following plugins:
 
 ## New
 
-- `smoothscroll-for-websites`
-- `prism-theme-one-dark`
+- Smooth scroll (`smoothscroll-for-websites`)
+  - `scroll-behavior: smooth` on post page
+- Code highlight theme: One Dark (`prism-theme-one-dark`)
   - `saber-highlight-css@0.0.5` included
 - Table of contents
-  - In front matter: `toc: true`
+  - Usage: add `toc: true` to front matter
 - Page transition
 - Lazy load transition & loader for `saber-plugin-image`
 - Click header to scroll to top
-- `scroll-behavior: smooth` on post page
-- Serif/Sans serif font select
+- Serif/sans serif font select
 - Complete `alt`, `title` and `rel` attributes
-- Complete SEO metas
+- Complete SEO meta tags
+  - Set `defaultImage` in theme config for social sites
 - Dark style for 404 layout and `medium-zoom`
 - Last updated date on title
 - Avatar as default meta image
@@ -42,19 +42,15 @@ And works best with following plugins:
 ## Removed
 
 - `normalize.css`
-- `intersection-observer`
 - `vue-headroom`
   - Headroom is built-in
-- `lozad`
-  - `saber-plugin-image` preserves image's size, thus avoid jumping caused by lazy load
-  - For external image  use `markdown-it-imsize`
-- Ionic icon font
-- Social links in footer
+- `lozad` & `intersection-observer`
+  - We recommend using `saber-plugin-image` as it preserves size, thus avoid jumping while loading
+  - To preserve size for external images use `markdown-it-imsize`
 
 ## Tweaks
 
 - Hide heading anchor on small screens
-- Change post outdated period to 180 days 
-- Smarter Disqus loading
+- Change post outdated period to 180 days
 - Fix 404 page layout
 - More...

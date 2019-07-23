@@ -1,20 +1,20 @@
 # saber-theme-aimer
 
-![Maintenance](https://img.shields.io/maintenance/no/2019.svg?style=for-the-badge)
+![Maintenance](https://img.shields.io/badge/Maintenance-Scarce-red.svg?style=for-the-badge)
 
 > A concise [Saber](https://saber.land/) theme, ported and evoluted from the unreleased hexo-theme-mina.
 
-This is a fork of [the original theme](https://github.com/h404bi/www.h404bi.com/tree/9f3305d724f7553f6e9b8874f86598be21c1e4b5/packages/saber-theme-aimer). For detailed usage and changes, see [Changelog](./CHANGELOG.md).
+This is a fork of [the original theme](https://github.com/h404bi/www.h404bi.com/tree/master/packages/saber-theme-aimer). For detailed usage and changes, see [Changelog](CHANGELOG.md).
 
 ## Install
 
-Since this modified theme isn't published on npm, you have to install it manually:
+Since this modified theme isn't published on npm, you should install it manually:
 
 1. Clone/download the theme.
-2. In Saber config:
+2. In Saber config file:
 
 ```js
-{
+module.exports = {
   // ...
   theme: 'path/to/theme'
 }

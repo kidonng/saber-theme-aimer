@@ -40,8 +40,11 @@ export default ({ setHead }) => {
         },
         {
           rel: 'preconnect',
-          href: 'https://fonts.gstatic.com/',
-          crossorigin: true
+          href: 'https://fonts.gstatic.com/'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/npm/ionicons/dist/css/ionicons.min.css'
         }
       ]
     }

@@ -5,14 +5,26 @@
   "author": "Chawye Hsu <h404bi@gmail.com>",
   "homepage": "https://github.com/h404bi/www.h404bi.com#readme",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vue-compile src -o dist",
+    "prepublishOnly": "yarn build",
+    "dev:example": "saber example"
+  },
   "dependencies": {
-    "bulma": "0.7.5",
+    "bulma": "^0.7.4",
+    "disqusjs": "^1.2.3",
     "prism-theme-one-dark": "^1.0.0",
-    "smoothscroll-for-websites": "1.4.9",
-    "tinytime": "0.2.6"
+    "smoothscroll-for-websites": "^1.4.9",
+    "tinytime": "^0.2.6"
   },
   "devDependencies": {
-    "autoprefixer": "9.6.0"
+    "autoprefixer": "^9.5.1",
+    "sass": "^1.19.0",
+    "sass-loader": "^7.1.0",
+    "vue-compile": "^0.6.0"
   },
   "keywords": [
     "saber",

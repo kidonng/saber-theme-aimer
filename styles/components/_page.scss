@@ -7,6 +7,10 @@
     padding: $gap-m 0;
     text-align: center;
 
+    .page-title {
+      margin: 0;
+    }
+
     .page-meta {
       display: flex;
       justify-content: center;
@@ -16,11 +20,9 @@
       .page-categories {
         display: flex;
         align-items: center;
-        color: $text-color;
 
         &:before {
           content: '・';
-          color: $meta-color;
         }
       }
     }
@@ -35,8 +37,6 @@
   }
 
   .page-body {
-    margin-bottom: $gap-xl;
-
     a:not([id^=fnref]) {
       border-bottom: 1px dashed $meta-color;
       overflow-wrap: break-word;
@@ -195,16 +195,24 @@
       color: $meta-color;
     }
 
+    // Content Block Element: Horizontal Rule
     hr {
       border: 0;
-      border-bottom: 2px solid $meta-color;
-      margin: 0 auto $gap-l;
+      height: auto;
+      margin: $gap-l auto;
+      color: $meta-color;
       opacity: 0.5;
-      padding-top: $gap-m;
-      width: 6rem;
 
-      &.footnotes-sep {
-        margin-top: $gap-m;
+      &:after {
+        line-height: 0;
+        display: block;
+        content: "* * *";
+        text-align: center;
+      }
+
+      // Footnotes: a special horizontal rule
+      &.footnotes-sep:after {
+        content: "Footnotes";
       }
     }
 
@@ -260,12 +268,13 @@
       text-align: left;
     }
 
+    // Content Block Element: Footnotes Section
     .footnotes {
       color: $meta-color;
       font-size: $font-size-footnotes;
 
       p {
-        margin-bottom: $gap-m;
+        margin-bottom: $gap-s;
 
         a {
           border: 0;
@@ -278,7 +287,30 @@
     }
   }
 
+  .page-block-action {
+    margin-top: $gap-l;
+    display: flex;
+    justify-content: space-between;
+
+    .page-tags {
+      float: right;
+      color: $meta-color;
+      font-size: $font-size-small;
+
+      .tag:before {
+        content: '#';
+        opacity: 0.5;
+        margin-right: $gap-s / 5;
+      }
+
+      .tag:hover {
+        opacity: 1;
+      }
+    }
+  }
+
   .page-comments {
+    margin-top: $gap-xl;
     margin-bottom: $gap-l;
 
     #load-disqus {

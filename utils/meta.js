@@ -1,5 +1,8 @@
 export default app => {
   if (app.page) {
+    let image = app.$siteConfig.url
+    image += app.page.attributes.assets.cover || app.page.attributes.assets.avatar || app.$themeConfig.defaultImage
+
     return [
       {
         name: 'description',
@@ -15,7 +18,7 @@ export default app => {
       },
       {
         property: 'og:image',
-        content: `${app.$siteConfig.url}${app.page.attributes.assets.cover || require('../assets/avatar.png')}`
+        content: image
       },
       {
         name: 'twitter:title',
@@ -27,10 +30,12 @@ export default app => {
       },
       {
         property: 'twitter:image:src',
-        content: `${app.$siteConfig.url}${app.page.attributes.assets.cover || require('../assets/avatar.png')}`
+        content: image
       }
     ]
   } else {
+    const image = `${app.$siteConfig.url}${app.$themeConfig.defaultImage}`
+
     return [
       {
         name: 'description',
@@ -46,7 +51,7 @@ export default app => {
       },
       {
         property: 'og:image',
-        content: `${app.$siteConfig.url}${require('../assets/avatar.png')}`
+        content: image
       },
       {
         name: 'twitter:title',
@@ -58,7 +63,7 @@ export default app => {
       },
       {
         property: 'twitter:image:src',
-        content: `${app.$siteConfig.url}${require('../assets/avatar.png')}`
+        content: image
       }
     ]
   }

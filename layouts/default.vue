@@ -36,6 +36,19 @@
             <Contents v-if="page.attributes.toc" :page="page" />
             <slot />
           </section>
+          <section class="page-block-action" v-if="$themeConfig.share || page.tags">
+            <div class="page-share"></div>
+            <div class="page-tags" v-if="page.tags">
+              <span v-for="(item, index) in page.tags" :key="index">
+                  <span v-if="index > 0">, </span>
+                  <saber-link
+                    class="tag"
+                    :to="item.permalink"
+                    v-text="item.name">
+                  </saber-link>
+                </span>
+            </div>
+          </section>
           <Disqus
             v-if="page.attributes.comments !== false && $themeConfig.disqusjs"
             :page="page" />
