@@ -1,6 +1,6 @@
 # Changelog
 
-Synced with commit [81443fc](https://github.com/h404bi/www.h404bi.com/tree/81443fc3a42d591aea72ece464aeb2297ea7432a/packages/saber-theme-aimer) (Jul 22, 2019). Some refactor/tweaking changes are not listed.
+Synced with commit [26154f9](https://github.com/h404bi/www.h404bi.com/tree/26154f97b8077426116872aac251de41eb92c263/packages/saber-theme-aimer) (Jul 30, 2019). Some refactor/tweaking changes are not listed.
 
 ## Packages
 

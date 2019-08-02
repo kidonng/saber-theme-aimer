@@ -8,7 +8,7 @@
         <div class="post-card post-list-item">
           <div class="post-card-image">
             <saber-link class="link" :to="post.attributes.permalink">
-              <saber-image
+              <img
                 :src="post.attributes.assets.cover"
                 :alt="post.attributes.title" />
               <span class="overlay"></span>

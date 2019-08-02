@@ -3,7 +3,7 @@
     <Header/>
     <main class="site-wrapper">
       <div class="error">
-        <saber-image class="mascot" src="../assets/whoops.png" alt="404 Not Found" />
+        <img class="mascot" src="../assets/whoops.png" alt="404 Not Found" />
         <span class="overlay"></span>
       </div>
     </main>

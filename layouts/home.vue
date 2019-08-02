@@ -6,10 +6,10 @@
         class="avatar"
         :to="page.attributes.avatarLink"
         :title="page.attributes.avatarTitle">
-        <saber-image :src="page.attributes.assets.avatar" alt="Avatar" />
+        <img :src="page.attributes.assets.avatar" alt="Avatar" />
       </saber-link>
       <div v-else class="avatar">
-        <saber-image :src="page.attributes.assets.avatar" alt="Avatar" />
+        <img :src="page.attributes.assets.avatar" alt="Avatar" />
       </div>
       <h1 class="name">{{ $siteConfig.author }}</h1>
       <div class="slogan" :title="$themeConfig.home.slogan.title">

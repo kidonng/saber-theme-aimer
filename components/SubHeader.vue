@@ -1,7 +1,7 @@
 <template>
   <section class="sub-header">
     <div class="hero-image">
-      <saber-image :src="page.attributes.assets.cover" :alt="page.attributes.title" />
+      <img :src="page.attributes.assets.cover" :alt="page.attributes.title" />
       <span class="overlay"></span>
     </div>
   </section>
