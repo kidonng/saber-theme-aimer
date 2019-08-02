@@ -1,6 +1,6 @@
 # saber-theme-aimer
 
-![Maintenance](https://img.shields.io/badge/Maintenance-Scarce-red.svg?style=for-the-badge)
+![Maintenance](https://img.shields.io/maintenance/no/2019?style=for-the-badge)
 
 > A concise [Saber](https://saber.land/) theme, ported and evoluted from the unreleased hexo-theme-mina.
 
