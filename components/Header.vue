@@ -3,8 +3,7 @@
     id="site-header"
     class="site-header"
     :class="{ hidden, unpinned }"
-    ref="header"
-    @click="scrollToTop">
+    ref="header">
     <div class="wrap columns is-gapless is-mobile">
       <div class="column is-3-desktop">
         <saber-link
@@ -27,32 +26,26 @@
 </template>
 
 <script>
+import { debounce } from 'lodash-es'
+
 export default {
-  data: () => ({
-    hidden: false,
-    unpinned: false,
-    scrollY: 0
-  }),
+  data() {
+    return {
+      hidden: false,
+      unpinned: false,
+      scrollY: 0,
+      scrollHandler: debounce(() => {
+        this.unpinned = window.scrollY >= this.$refs.header.scrollHeight
+        this.hidden = this.unpinned && window.scrollY >= this.scrollY
+        this.scrollY = window.scrollY
+      }, 50)
+    }
+  },
   mounted() {
     document.addEventListener('scroll', this.scrollHandler)
   },
   beforeDestroy() {
     document.removeEventListener('scroll', this.scrollHandler)
-  },
-  methods: {
-    scrollHandler() {
-      this.unpinned = window.scrollY >= this.$refs.header.scrollHeight
-      this.hidden = this.unpinned && window.scrollY >= this.scrollY
-      this.scrollY = window.scrollY
-    },
-    scrollToTop(e) {
-      if (e.target.tagName !== 'A'){
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        })
-      }
-    }
   }
 }
 </script>

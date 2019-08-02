@@ -205,7 +205,7 @@
       opacity: 0.5;
 
       &:after {
-        line-height: 0;
+        line-height: $gap-m;
         display: block;
         content: "* * *";
         text-align: center;

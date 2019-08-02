@@ -1,70 +1,46 @@
 export default app => {
-  if (app.page) {
-    let image = app.$siteConfig.url
-    image += app.page.attributes.assets.cover || app.page.attributes.assets.avatar || app.$themeConfig.defaultImage
+  const title = app.page.attributes.title || app.$siteConfig.title
+  const description = app.page.attributes.description || app.$siteConfig.description
+  let keywords = app.$siteConfig.keywords
+  if (app.page.tags) keywords += `,${app.page.tags.map(tag => tag.name).join(',')}`
 
-    return [
-      {
-        name: 'description',
-        content: app.page.attributes.description || app.$siteConfig.description
-      },
-      {
-        property: 'og:title',
-        content: app.page.attributes.title
-      },
-      {
-        property: 'og:description',
-        content: app.page.attributes.description || app.$siteConfig.description
-      },
-      {
-        property: 'og:image',
-        content: image
-      },
-      {
-        name: 'twitter:title',
-        content: app.page.attributes.title
-      },
-      {
-        name: 'twitter:description',
-        content: app.page.attributes.description || app.$siteConfig.description
-      },
-      {
-        property: 'twitter:image:src',
-        content: image
-      }
-    ]
-  } else {
-    const image = `${app.$siteConfig.url}${app.$themeConfig.defaultImage}`
+  const metas = [
+    {
+      name: 'description',
+      content: description
+    },
+    {
+      name: 'keywords',
+      content: keywords
+    },
+    {
+      property: 'og:title',
+      content: title
+    },
+    {
+      property: 'og:description',
+      content: description
+    },
+    {
+      name: 'twitter:title',
+      content: title
+    },
+    {
+      name: 'twitter:description',
+      content: description
+    }
+  ]
 
-    return [
-      {
-        name: 'description',
-        content: app.$siteConfig.description
-      },
-      {
-        property: 'og:title',
-        content: app.$siteConfig.title
-      },
-      {
-        property: 'og:description',
-        content: app.$siteConfig.description
-      },
-      {
-        property: 'og:image',
-        content: image
-      },
-      {
-        name: 'twitter:title',
-        content: app.$siteConfig.title
-      },
-      {
-        name: 'twitter:description',
-        content: app.$siteConfig.description
-      },
-      {
-        property: 'twitter:image:src',
-        content: image
-      }
-    ]
+  if (app.page.attributes.assets.cover || app.page.attributes.assets.avatar) {
+    const image = `${app.$siteConfig.url}${app.page.attributes.assets.cover || app.page.attributes.assets.avatar}`
+    metas.push({
+      property: 'og:image',
+      content: image
+    }, {
+      property: 'twitter:image:src',
+      content: image
+    })
   }
+
+  return metas
 }

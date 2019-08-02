@@ -2,7 +2,7 @@
 
 Synced with commit [26154f9](https://github.com/h404bi/www.h404bi.com/tree/26154f97b8077426116872aac251de41eb92c263/packages/saber-theme-aimer) (Jul 30, 2019). Some refactor/tweaking changes are not listed.
 
-## Packages
+## Usage
 
 The theme depends on following packages:
 
@@ -11,13 +11,20 @@ The theme depends on following packages:
 
 And works best with following packages:
 
-- `markdown-it-attrs` / `markdown-it-decorate`
+- `markdown-it-attrs` / `markdown-it-decorate` (for floating images with `.left`/`.right`)
 - `markdown-it-implicit-figures`
   - Plugin config: `figcaption: true`
 - `markdown-it-footnote`
 - `prismjs` & `saber-plugin-prismjs`
 - `saber-plugin-image`
 - `saber-plugin-medium-zoom`
+
+For (theme) config example, see [here](https://github.com/h404bi/www.h404bi.com/blob/26154f97b8077426116872aac251de41eb92c263/saber-config.js#L22-L115).
+
+**NOTE:**
+
+- This theme doesn't provide the `pswp` option.
+- To enable Disqus, you must put [Disqus config](https://github.com/h404bi/www.h404bi.com/blob/26154f97b8077426116872aac251de41eb92c263/saber-config.js#L11-L16) under `themeConfig`.
 
 ## New
 
@@ -28,16 +35,11 @@ And works best with following packages:
 - Table of contents
   - Usage: add `toc: true` to front matter
 - Page transition
-- Lazy load transition & loader for `saber-plugin-image`
-- Click header to scroll to top
 - Serif/sans serif font select
 - Complete `alt`, `title` and `rel` attributes
 - Complete SEO meta tags
-  - Set `defaultImage` in theme config for social sites
 - Dark style for 404 layout and `medium-zoom`
 - Last updated date on title
-- Avatar as default meta image
-  - Avatar should be placed to `assets/avatar.png`
 
 ## Removed
 
@@ -45,8 +47,8 @@ And works best with following packages:
 - `vue-headroom`
   - Headroom is built-in
 - `lozad` & `intersection-observer`
-  - We recommend using `saber-plugin-image` as it preserves size, thus avoid jumping while loading
-  - To preserve size for external images use `markdown-it-imsize`
+  - `saber-plugin-image` is recommended as it preserves size, thus avoid jumping while loading
+  - To preserve size for external images, please use `markdown-it-imsize`
 
 ## Tweaks
 

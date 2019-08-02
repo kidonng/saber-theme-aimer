@@ -6,9 +6,9 @@
           <ul>
             <li v-for="(item, index) in $themeConfig.footer.nav" :key="index">
               <a
-                v-if="item.name === 'Feed'"
+                v-if="item.name === 'Feed' || item.name === 'RSS'"
                 :href="$feed.permalink"
-                target="_blank">Feed</a>
+                target="_blank">{{ item.name }}</a>
               <a
                 v-else-if="item.name === 'Font'"
                 class="button"
